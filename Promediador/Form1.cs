@@ -35,5 +35,19 @@ namespace Promediador
         {
             Libreria_validacion.Validar.SoloNumeros(e);
         }
+
+        private void btnProm_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Verifica la información que ingresaste.");
+                dataGridView1.Rows.Clear();
+                dataGridView1.Refresh();
+            }
+        }
     }
 }

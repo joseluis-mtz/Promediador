@@ -72,6 +72,7 @@
             this.btnProm.Text = "Ingresar Datos";
             this.btnProm.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnProm.UseVisualStyleBackColor = true;
+            this.btnProm.Click += new System.EventHandler(this.btnProm_Click);
             // 
             // txtProm
             // 
