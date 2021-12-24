@@ -78,6 +78,31 @@ namespace Promediador
                         dataGridView1.Columns[col + 2].Name = "Estado";
                     }
                 }
+
+                // Arreglo para almacenar los números de lista de cada alumno
+                int[] alumnos = new int[cantAl];
+
+                // FOR para agregar el número de lista de cada alumno en la columna No. Lista
+                for (int i = 0; i < alumnos.Length; i++)
+                {
+                    // Comenzar a listar desde el número de lista 1 y no desde el 0
+                    alumnos[i] = i + 1;
+                    // Agregar el valor obtenido (No. Lista) a la columna en cada posición
+                    dataGridView1.Rows.Add(alumnos[i].ToString());
+                }
+
+                // Arreglo para guardar las calificaciones de cada alumno
+                // Número de filas dadas por la cantidad de alumnos
+                // Número de columnas dadas por la cantidad de calificaciones
+
+                int[,] calificaciones = new int[cantAl, canCal];
+
+                // Llevo control de los alumnos y sus calificaciones con un contador.
+                int contadorAlumno = 0;
+                int contadorCalificacion = 0;
+                double suma = 0;
+                double promedio = 0;
+                int noColumnas = int.Parse(dataGridView1.ColumnCount.ToString());
             }
             catch (Exception)
             {
