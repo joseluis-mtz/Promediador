@@ -20,5 +20,20 @@ namespace Promediador
         {
 
         }
+
+        private void txtCantAl_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Libreria_validacion.Validar.SoloNumeros(e);
+        }
+
+        private void txtCalPorAl_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Libreria_validacion.Validar.SoloNumeros(e);
+        }
+
+        private void txtProm_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Libreria_validacion.Validar.SoloNumeros(e);
+        }
     }
 }

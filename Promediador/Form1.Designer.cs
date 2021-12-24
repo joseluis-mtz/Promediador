@@ -80,6 +80,7 @@
             this.txtProm.Name = "txtProm";
             this.txtProm.Size = new System.Drawing.Size(100, 26);
             this.txtProm.TabIndex = 11;
+            this.txtProm.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtProm_KeyPress);
             // 
             // txtCalPorAl
             // 
@@ -88,6 +89,7 @@
             this.txtCalPorAl.Name = "txtCalPorAl";
             this.txtCalPorAl.Size = new System.Drawing.Size(100, 26);
             this.txtCalPorAl.TabIndex = 10;
+            this.txtCalPorAl.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCalPorAl_KeyPress);
             // 
             // txtCantAl
             // 
@@ -96,6 +98,7 @@
             this.txtCantAl.Name = "txtCantAl";
             this.txtCantAl.Size = new System.Drawing.Size(100, 26);
             this.txtCantAl.TabIndex = 9;
+            this.txtCantAl.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCantAl_KeyPress);
             // 
             // label3
             // 
