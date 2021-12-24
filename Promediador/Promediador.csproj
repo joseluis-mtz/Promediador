@@ -38,6 +38,7 @@
     <Reference Include="Libreria validacion">
       <HintPath>..\Libreria validacion.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />

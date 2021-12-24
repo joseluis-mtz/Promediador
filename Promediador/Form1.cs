@@ -103,6 +103,34 @@ namespace Promediador
                 double suma = 0;
                 double promedio = 0;
                 int noColumnas = int.Parse(dataGridView1.ColumnCount.ToString());
+
+                // Voy agregar las calificaciones a cada alumno, promediar y aprobar.
+                for (int posFil = 0; posFil < calificaciones.GetLength(0); posFil++)
+                {
+                    for (int PosCol = 0; PosCol < calificaciones.GetLength(1); PosCol++)
+                    {
+                        calificaciones[posFil, PosCol] = int.Parse(Microsoft.VisualBasic.Interaction.InputBox("Ingrese la calificación: " + (contadorCalificacion + 1) + " del alumno: " + alumnos[contadorAlumno], "Ingresar Calificación"));
+                        suma = suma + calificaciones[posFil, PosCol];
+                        contadorCalificacion++;
+                        dataGridView1.Rows[posFil].Cells[PosCol + 1].Value = calificaciones[posFil, PosCol];
+                    }
+                    promedio = suma / canCal;
+                    dataGridView1.Rows[posFil].Cells[noColumnas - 2].Value = promedio.ToString("#.##");
+                    if (promedio >= prom)
+                    {
+                        dataGridView1.Rows[posFil].Cells[noColumnas - 1].Value = "Aprobado";
+                    }
+                    else
+                    {
+                        dataGridView1.Rows[posFil].Cells[noColumnas - 1].Value = "NA";
+                    }
+                    contadorAlumno++;
+                    if (contadorCalificacion == canCal)
+                    {
+                        contadorCalificacion = 0;
+                        suma = 0;
+                    }
+                }
             }
             catch (Exception)
             {
